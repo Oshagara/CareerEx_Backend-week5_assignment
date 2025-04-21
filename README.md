@@ -45,4 +45,4 @@ Israel Oshagara
 
 # Clone this repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   git clone https://github.com/Oshagara/CareerEx_Backend-week5_assignment.git
