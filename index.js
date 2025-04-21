@@ -21,50 +21,50 @@ const drugs = [
     { id: 20, name: "Folic Acid", category: "Supplement", dosageMg: 5, isPrescriptionOnly: false, stock: 250, manufacturer: "Nature’s Bounty" }
   ];
   
-  // 1. Get all drugs that are antibiotics.
+  // Get all drugs that are antibiotics.
   const antibiotics = drugs.filter(drug => drug.category === "Antibiotic");
   console.log("Antibiotics:", antibiotics);
   
-  // 2. Return an array of drug names in lowercase.
+  // Return an array of drug names in lowercase.
   const lowerCaseNames = drugs.map(drug => drug.name.toLowerCase());
   console.log("Lowercase Names:", lowerCaseNames);
   
-  // 3. Function that accepts a category and returns all drugs under that category.
+  // Function that accepts a category and returns all drugs under that category.
   function getDrugsByCategory(category) {
     return drugs.filter(drug => drug.category === category);
   }
   console.log("Analgesics:", getDrugsByCategory("Analgesic"));
   
-  // 4. Log each drug’s name and its manufacturer.
+  // Log each drug’s name and its manufacturer.
   drugs.forEach(drug => {
     console.log(`Drug: ${drug.name}, Manufacturer: ${drug.manufacturer}`);
   });
   
-  // 5. Return all drugs that require a prescription.
+  // Return all drugs that require a prescription.
   const prescriptionDrugs = drugs.filter(drug => drug.isPrescriptionOnly === true);
   console.log("Prescription Drugs:", prescriptionDrugs);
   
-  // 6. Return new array in format: "Drug: [name] - [dosageMg]mg"
+  // Return new array in format: "Drug: [name] - [dosageMg]mg"
   const formattedDrugs = drugs.map(drug => `Drug: ${drug.name} - ${drug.dosageMg}mg`);
   console.log("Formatted Drugs:", formattedDrugs);
   
-  // 7. Function that returns all drugs with a stock less than 50.
+  // Function that returns all drugs with a stock less than 50.
   function getLowStockDrugs() {
     return drugs.filter(drug => drug.stock < 50);
   }
   console.log("Low Stock Drugs:", getLowStockDrugs());
   
-  // 8. Return all drugs that are not prescription-only.
+  // Return all drugs that are not prescription-only.
   const nonPrescriptionDrugs = drugs.filter(drug => !drug.isPrescriptionOnly);
   console.log("Non-Prescription Drugs:", nonPrescriptionDrugs);
   
-  // 9. Function that returns how many drugs are from a given manufacturer.
+  // Function that returns how many drugs are from a given manufacturer.
   function countDrugsByManufacturer(manufacturerName) {
     return drugs.filter(drug => drug.manufacturer === manufacturerName).length;
   }
   console.log("Drugs by Pfizer:", countDrugsByManufacturer("Pfizer"));
   
-  // 10. Use forEach() to count how many drugs are Analgesics.
+  // Use forEach() to count how many drugs are Analgesics.
   let analgesicCount = 0;
   drugs.forEach(drug => {
     if (drug.category === "Analgesic") {
