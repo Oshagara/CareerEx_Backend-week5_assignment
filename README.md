@@ -38,6 +38,9 @@ It works with an array of drug objects to solve a series of questions.
 
 ---
 
+## Author
+Israel Oshagara
+
 ## How to Use
 
 # Clone this repo:
